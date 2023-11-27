@@ -3,3 +3,11 @@
 * {
   font-family: 'Baloo 2';
 }
+
+#navbar {
+  border-bottom: 1px solid #222;
+}
+
+#navbar img {
+  width: 50px;
+}

@@ -10,7 +10,7 @@
 <body>
   <h1>Hello world!</h1>
   <span>
-    <a href="/">home</a>
+    <a href="/introduction">home</a>
   </span>
 </body>
 
