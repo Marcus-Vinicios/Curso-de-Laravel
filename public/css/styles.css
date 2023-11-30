@@ -164,6 +164,44 @@ header {
   color: #757575;
 }
 
+/* Event create page */
+
+#event-create-container {
+  padding: 2rem;
+}
+
+#event-create-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 12px 3px rgba(133, 125, 133, 0.75);
+}
+
+#event-create-container form input[type="submit"] {
+  align-self: center;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+#event-create-container label {
+  font-weight: bold;
+}
+
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea {
+  font-size: 0.8rem;
+}
+
+#event-create-container .select-radio {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
 /* footer */
 footer {
   text-align: center;
