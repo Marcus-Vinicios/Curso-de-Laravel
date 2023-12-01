@@ -148,11 +148,11 @@ header {
 }
 
 #events-container .card {
-  flex: 1 1 0;
-  max-width: 33%;
+  flex: 1 1 24%;
+  max-width: 25%;
   border-radius: 10px;
   padding: 0px;
-  margin: 5px;
+  margin: 0.5%;
 }
 
 #events-container img {
