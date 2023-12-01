@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-light">
             <div class="navbar-collapse collapse" id="navbar">
                 <a href="/" class="navbar-brand">
-									<span>Mark-Events</span>
+                    <span>Mark-Events</span>
                 </a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -44,7 +44,16 @@
             </div>
         </nav>
     </header>
-    @yield('content')
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                @if (session('msg'))
+                    <p class="msg">{{ session('msg') }}</p>
+                @endif
+                @yield('content')
+            </div>
+        </div>
+    </main>
     <footer>
         <p>Mark-Events&copy; <?php echo date('Y'); ?>&reg;</p>
     </footer>
