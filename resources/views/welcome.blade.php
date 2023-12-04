@@ -2,7 +2,7 @@
 @section('title', 'Mark-Events')
 @section('content')
     <div id="search-container" class="col-md-12">
-        <form action="">
+        <form action="/" method="GET">
             <div class="search">
                 <input type="text" id="search" name="search" placeholder="Busque por um Evento">
                 <button class="btn btn-primary ">
@@ -13,8 +13,12 @@
         </form>
     </div>
     <div id="events-container" class="col-md-12">
-        <h2>Próximos Eventos</h2>
-        <p class="subtitle">Veja os eventos dos próximos dias</p>
+        @if ($search)
+            <h2>Buscando por: {{ $search }}</h2>
+        @else
+            <h2>Próximos Eventos</h2>
+            <p class="subtitle">Veja os eventos dos próximos dias</p>
+        @endif
         <div class="cards-container">
             @foreach ($events as $event)
                 <div class="card col-md-3">
@@ -31,6 +35,18 @@
                     </div>
                 </div>
             @endforeach
+            @if (count($events) == 0 && $search)
+                <div>
+                    <p>
+                        Não foi possivel encontrar nenhum evento com: {{ $search }}.
+                    </p>
+                    <p>
+                        <a href="/">Ver todos os eventos.</a>
+                    </p>
+                </div>
+            @elseif (count($events) == 0)
+                <p>Não há eventos disponíveis.</p>
+            @endif
         </div>
     </div>
 @endsection
