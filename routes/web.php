@@ -6,7 +6,7 @@ use App\Http\Controllers\EventController;
 Route::get('/', [EventController::class, 'home']);
 
 // Events
-Route::get('/events/create', [EventController::class, 'create']);
+Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
 Route::get('/events/{id}/show', [EventController::class, 'show']);
 Route::post('/events', [EventController::class, 'store']);
 
