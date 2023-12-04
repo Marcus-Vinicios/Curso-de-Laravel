@@ -61,3 +61,13 @@ Route::get('/aula5', function () {
 Route::get('/aula6', function () {
 	return view('/introducao/estatics');
 });
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
