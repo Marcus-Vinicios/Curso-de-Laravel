@@ -2,7 +2,7 @@
 @section('title', $event->title)
 @section('content')
     <div class="col-md-10 offset-md-1">
-        <div class="row" style="border: 1px solid red">
+        <div class="row">
             <div id="image-container" class="col-md-6">
                 @if ($event->image)
                     <img src="/img/events/{{ $event->image }}" class="img-fluid" alt="{{ $event->title }}">
@@ -22,7 +22,7 @@
                 </p>
                 <p class="event-owner">
                     <ion-icon name="star-outline"></ion-icon>
-                    Dono do Evento
+                    {{ $eventOwner['name'] }}
                 </p>
                 <a href="#" class="btn btn-primary" id="event-submit">Confirmar Presença</a>
                 <h3>O evento conta com:</h3>
